@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script type="text/javascript" src="lib.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <style type="text/css">
+      body{
+        margin: 0px;
+      }
+      p{
+        margin: 100px 100px;
+        font-size: 4em;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p id="tour-guide-1">1. Something to tour.</p>
+      <p id="tour-guide-2">2. Something to tour.</p>
+      <p id="tour-guide-3">3. Something to tour.</p>
+      <p>3. Something to tour.</p>
+      <p>3. Something to tour.</p>
+      <p>3. Something to tour.</p>
+      <p>3. Something to tour.</p>
+      <p>3. Something to tour.</p>
+      <p>3. Something to tour.</p>
+      <p>3. Something to tour.</p>
+      <p>3. Something to tour.</p>
+      <p>3. Something to tour.</p>
+      <p>3. Something to tour.</p>
+      <p>3. Something to tour.</p>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $(document).click(function(){
+          if(!TourGuide.isTourGoing())
+          TourGuide.startTour({
+            backgroundColor : "#000000",
+            opacity : 0.8
+          });
+          else
+            TourGuide.showNextFrame();
+        });
+      });
+    </script>
+  </body>
+</html>
